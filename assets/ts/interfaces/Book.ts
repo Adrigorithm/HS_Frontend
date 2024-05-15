@@ -5,4 +5,6 @@ interface Book {
     pages: number;
     language: "EN" | "NL";
     description: string;
+
+    generateCard(): HTMLElement;
 }

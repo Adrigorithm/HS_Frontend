@@ -23,7 +23,7 @@ class BookDetails {
         Generator.setText(title, `${this.title}`);
 
         let image = document.createElement("img");
-        image.setAttribute("src", `${this.image}`);
+        image.setAttribute("src", this.getImageUri());
         image.setAttribute("alt", "image of bookcover")
 
         let author = document.createElement("h5");
@@ -38,5 +38,9 @@ class BookDetails {
         card.append(title, image, author, description);
 
         return card;
+    }
+
+    getImageUri(): string {
+        return `/assets/images/${this.image}`;
     }
 }

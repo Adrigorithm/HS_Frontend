@@ -1,0 +1,15 @@
+{
+    "books": [
+        {
+            "title": "titleSample",
+            "authors": [
+                "authorSample",
+                "author2Sample"
+            ],
+            "image": "bookSample.webp",
+            "pages": 128,
+            "language": "EN",
+            "description": "this is a sample book"
+        }
+    ]
+}
