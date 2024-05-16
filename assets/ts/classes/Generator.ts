@@ -13,4 +13,18 @@ class Generator{
 
         node.appendChild(textContent);
     }
+
+    static loadImages(...fileNames: Array<string>): Array<HTMLElement> {
+        let images = new Array<HTMLElement>;
+
+        fileNames.forEach(file => {
+            let image = document.createElement("img");
+            image.setAttribute("src", `/assets/images/${file}`);
+            image.setAttribute("alt", `image of ${file}`);
+
+            images.push(image);
+        });
+
+        return images;
+    }
 }
