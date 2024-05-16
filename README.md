@@ -2,4 +2,4 @@
 - HTML
 - CSS (TailwindCSS)
 - JavaScript (TypeScript)
-- YAML (for data)
+- JSON (for data)
