@@ -3,3 +3,6 @@
 - CSS (TailwindCSS)
 - JavaScript (TypeScript)
 - JSON (for data)
+
+# Todo
+- [ ] Solid.JS
