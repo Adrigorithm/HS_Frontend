@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@solidjs/router": "^0.13.6",
+    "@solidjs/start": "^1.0.2",
+    "router": "link:@solidjs/start/router",
     "solid-js": "^1.8.15"
   },
   "devDependencies": {

@@ -2,11 +2,13 @@ import { Component, Index } from "solid-js"
 
 const Navigation: Component<NavigationProps> = props => {
     return (
-        <ul>
-            <Index each={props.pages}>
-                {(page) => <li>{page()}</li>}
-            </Index>
-        </ul>
+        <nav>
+            <ul>
+                <Index each={props.pages}>
+                    {(page) => <a href={`/ + ${page()}`}><li>{page()}</li></a>}
+                </Index>
+            </ul>
+        </nav>  
     )
 }
 
