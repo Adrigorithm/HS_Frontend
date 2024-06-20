@@ -1,8 +1,6 @@
 # Node
 node_modules
 
-# Editor directories and files
-.vscode/*
-
-# Custom
-commands
+# Compiled / Generated
+src/assets/css/output.css
+src/assets/js/
