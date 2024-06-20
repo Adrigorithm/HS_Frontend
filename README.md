@@ -1,7 +1,7 @@
 # A simple frontend website using
 - HTML
 - CSS (TailwindCSS)
-- JavaScript (Vite + Solid + TypeScript)
+- TypeScript
 - JSON (for data)
 
 ## Todo
