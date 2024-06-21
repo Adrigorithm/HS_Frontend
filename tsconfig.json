@@ -13,6 +13,7 @@
         "alwaysStrict": true,
     },
     "include": [
-        "./src/assets/ts/*.ts"
+        "./src/assets/ts/*.ts",
+        "./src/assets/ts/interfaces/*.ts"
     ]
 }
