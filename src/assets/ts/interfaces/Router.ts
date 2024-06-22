@@ -1,3 +1,3 @@
 interface Router {
-    pages: Array<string> | string;
+    pages: Array<HTMLElement>;
 }
