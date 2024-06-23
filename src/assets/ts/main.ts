@@ -27,3 +27,21 @@ async function setupBooks() {
         console.log(books);
     });
 }
+
+/**
+ * 
+ * @param images A list of the names of the images, without the file extension. The full path is processed within the method.
+ */
+async function lazyLoadImages(... images: Array<string>) {
+    images.forEach(imageUri => {
+        HttpClient.getBlob(`assets/images/${imageUri}.webp`).then((imageBlob) => {
+            let imageElement: HTMLImageElement | null = document.querySelector(`img[alt="${imageUri}"]`);
+
+            if (imageElement) {
+                imageElement.src = URL.createObjectURL(imageBlob);
+            } else {
+                console.log(`No image element with alt ${imageUri} could be found, skipping...`);
+            }
+        });
+    });
+}
