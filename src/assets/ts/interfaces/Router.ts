@@ -1,3 +1,4 @@
 export interface Router {
-    pages: Array<HTMLElement>;
+    pages: HTMLCollection;
+    navigate(idName: string): void;
 }

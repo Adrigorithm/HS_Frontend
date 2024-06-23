@@ -14,6 +14,12 @@ function onLoad(): void {
 function setupRouter(): Router {
     const pages = document.getElementsByClassName("page");
     router = new RouterImpl(pages);
+    window.addEventListener("hashchange", () => {
+        router.navigate(location.hash.substring(1));
+    })
+    router.navigate(location.hash.substring(1));
+
+    return router;
 }
 
 async function setupBooks() {

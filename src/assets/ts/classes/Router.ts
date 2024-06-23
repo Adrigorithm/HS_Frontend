@@ -1,12 +1,12 @@
 export class RouterImpl {
     visiblePage: HTMLElement | null = null;
-    readonly pages: Array<HTMLElement> = new Array<HTMLElement>;
+    readonly pages: HTMLCollection;
 
-    constructor(... pages: Array<HTMLElement>){
+    constructor(pages: HTMLCollection){
         this.pages = pages;
     }
 
-    navigate(idName: string): void {
+    public navigate(idName: string): void {
         let nodeToShow: number | null = null;
 
         for (let i = 0; i < this.pages.length; i++) {
@@ -26,13 +26,13 @@ export class RouterImpl {
         }
     }
 
-    private hideHTMLElement(element: HTMLElement): void {
+    private hideHTMLElement(element: Element): void {
         if (element.classList[element.classList.length - 1] != "hidden"){
             element.classList.add("hidden");
         }
     }
 
-    private showHTMLElement(element: HTMLElement): void {
+    private showHTMLElement(element: Element): void {
         if (element.classList[element.classList.length - 1] == "hidden"){
             element.classList.remove("hidden");
         }
