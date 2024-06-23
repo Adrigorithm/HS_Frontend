@@ -1,6 +1,9 @@
-class BookImpl {
+import { Book } from "../interfaces/Book";
+import { Generator } from "./Generator";
+
+class BookImpl implements Book {
     readonly title: string;
-    readonly authors: Array<string> | string;
+    readonly authors: Array<string>;
     readonly image: string;
     readonly pages: number;
     readonly language: "EN" | "NL";

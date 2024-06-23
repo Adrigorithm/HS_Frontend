@@ -1,4 +1,5 @@
-class Generator {
+export class Generator {
+    constructor(){}
     /**
      * Set (or append) the text content of a certain html node.
      * @param node The node to change the text content for

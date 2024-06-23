@@ -1,4 +1,4 @@
-class RouterImpl {
+export class RouterImpl {
     visiblePage: HTMLElement | null = null;
     readonly pages: Array<HTMLElement> = new Array<HTMLElement>;
 

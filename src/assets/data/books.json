@@ -1,0 +1,66 @@
+{
+    "books": [
+        {
+            "title": "Book1",
+            "authors": [
+                "Author1", 
+                "Author2"
+            ],
+            "image": "assets/images/book1.webp",
+            "pages": 4,
+            "language": "EN",
+            "description": "Description1"
+        },
+        {
+            "title": "Book2",
+            "authors": [
+                "Author2"
+            ],
+            "image": "assets/images/book2.webp",
+            "pages": 4,
+            "language": "NL",
+            "description": "Description2"
+        },
+        {
+            "title": "Book3",
+            "authors": [
+                "Author1"
+            ],
+            "image": "assets/images/book3.webp",
+            "pages": 4,
+            "language": "NL",
+            "description": "Description3"
+        },
+        {
+            "title": "Book4",
+            "authors": [
+                "Author3", 
+                "Author4"
+            ],
+            "image": "assets/images/book4.webp",
+            "pages": 4,
+            "language": "NL",
+            "description": "Description4"
+        },
+        {
+            "title": "Book5",
+            "authors": [
+                "Author4"
+            ],
+            "image": "assets/images/book5.webp",
+            "pages": 4,
+            "language": "EN",
+            "description": "Description5"
+        },
+        {
+            "title": "Book6",
+            "authors": [
+                "Author7"
+            ],
+            "image": "assets/images/book6.webp",
+            "pages": 4,
+            "language": "EN",
+            "description": "Description6"
+        }
+    ]
+}
