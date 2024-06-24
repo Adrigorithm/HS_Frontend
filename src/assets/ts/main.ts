@@ -3,7 +3,7 @@ import { RouterImpl } from "./classes/Router.js";
 import { Book } from "./interfaces/Book.js";
 import { Router } from "./interfaces/Router.js";
 
-window.addEventListener("onload", onLoad)
+window.addEventListener("load", onLoad)
 
 let router: Router;
 
@@ -14,10 +14,15 @@ function onLoad(): void {
 function setupRouter(): Router {
     const pages = document.getElementsByClassName("page");
     router = new RouterImpl(pages);
+
     window.addEventListener("hashchange", () => {
         router.navigate(location.hash.substring(1));
     })
-    router.navigate(location.hash.substring(1));
+
+    const currentLocationId = location.hash.substring(1);
+    
+    if (currentLocationId)
+        router.navigate(currentLocationId);
 
     return router;
 }
@@ -37,11 +42,10 @@ async function lazyLoadImages(... images: Array<string>) {
         HttpClient.getBlob(`assets/images/${imageUri}.webp`).then((imageBlob) => {
             let imageElement: HTMLImageElement | null = document.querySelector(`img[alt="${imageUri}"]`);
 
-            if (imageElement) {
+            if (imageElement)
                 imageElement.src = URL.createObjectURL(imageBlob);
-            } else {
+            else
                 console.log(`No image element with alt ${imageUri} could be found, skipping...`);
-            }
         });
     });
 }
