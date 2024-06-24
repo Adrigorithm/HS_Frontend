@@ -1,4 +1,6 @@
-export class RouterImpl {
+import { Router } from "../interfaces/Router.js";
+
+class RouterImpl implements Router {
     visiblePage: HTMLElement | null = null;
     readonly pages: HTMLCollection;
 
@@ -14,6 +16,7 @@ export class RouterImpl {
                 this.hideHTMLElement(this.pages[i]);
             }
             else if (this.pages[i].id == idName){
+                console.log(`navigated to #${idName}`);
                 this.showHTMLElement(this.pages[i]);
                 nodeToShow = i;
             }
@@ -38,3 +41,5 @@ export class RouterImpl {
         }
     }
 }
+
+export { RouterImpl }

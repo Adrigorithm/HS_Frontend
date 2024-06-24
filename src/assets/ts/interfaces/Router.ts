@@ -1,4 +1,6 @@
-export interface Router {
+interface Router {
     pages: HTMLCollection;
     navigate(idName: string): void;
 }
+
+export { Router };

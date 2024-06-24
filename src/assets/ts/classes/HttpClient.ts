@@ -1,4 +1,4 @@
-export class HttpClient {
+class HttpClient {
     static async get<T>(url: string): Promise<T> {
         const response = await fetch(url);
 
@@ -19,3 +19,5 @@ export class HttpClient {
         return await response.blob();
     }
 }
+
+export { HttpClient }

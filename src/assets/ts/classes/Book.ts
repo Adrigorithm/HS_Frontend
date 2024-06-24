@@ -1,5 +1,5 @@
-import { Book } from "../interfaces/Book";
-import { Generator } from "./Generator";
+import { Book } from "../interfaces/Book.js";
+import { Generator } from "./Generator.js";
 
 class BookImpl implements Book {
     readonly title: string;

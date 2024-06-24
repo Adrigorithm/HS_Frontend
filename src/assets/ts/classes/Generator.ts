@@ -1,4 +1,4 @@
-export class Generator {
+class Generator {
     constructor(){}
     /**
      * Set (or append) the text content of a certain html node.
@@ -15,3 +15,5 @@ export class Generator {
         node.appendChild(textContent);
     }
 }
+
+export { Generator }

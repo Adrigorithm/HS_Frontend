@@ -1,4 +1,4 @@
-export interface Book {
+interface Book {
     title: string;
     authors: Array<string>;
     image: string;
@@ -6,3 +6,5 @@ export interface Book {
     language: "EN" | "NL";
     description: string;
 }
+
+export { Book }

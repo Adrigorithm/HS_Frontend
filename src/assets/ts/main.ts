@@ -1,7 +1,7 @@
-import { HttpClient } from "./classes/HttpClient";
-import { RouterImpl } from "./classes/Router";
-import { Book } from "./interfaces/Book";
-import { Router } from "./interfaces/Router"
+import { HttpClient } from "./classes/HttpClient.js";
+import { RouterImpl } from "./classes/Router.js";
+import { Book } from "./interfaces/Book.js";
+import { Router } from "./interfaces/Router.js";
 
 window.addEventListener("onload", onLoad)
 
