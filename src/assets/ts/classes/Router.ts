@@ -9,10 +9,10 @@ class RouterImpl implements Router {
     }
 
     public navigate(idName: string): void {
-        let nodeToShow: number | null = null;
+        let nodeToShow: number = -1;
 
         for (let i = 0; i < this.pages.length; i++) {
-            if (nodeToShow){
+            if (nodeToShow >= 0){
                 this.hideHTMLElement(this.pages[i]);
             }
             else if (this.pages[i].id == idName){
@@ -22,7 +22,7 @@ class RouterImpl implements Router {
             }
         }
 
-        if (nodeToShow){
+        if (nodeToShow >= 0){
             for (let i = nodeToShow - 1; i >= 0; i--) {
                 this.hideHTMLElement(this.pages[i]);
             }

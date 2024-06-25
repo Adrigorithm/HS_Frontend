@@ -9,6 +9,8 @@ let router: Router;
 
 function onLoad(): void {
     router = setupRouter();
+    lazyLoadImages("Fred Glover", "Packwood");
+    setupBooks();
 }
 
 function setupRouter(): Router {
@@ -27,7 +29,7 @@ function setupRouter(): Router {
     return router;
 }
 
-async function setupBooks() {
+async function setupBooks(): Promise<void> {
     HttpClient.get<Array<Book>>("assets/data/books.json").then((books) => {
         console.log(books);
     });
