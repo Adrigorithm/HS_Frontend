@@ -1,0 +1,28 @@
+@property --background-colour-light {
+    syntax: "<color>";
+    initial-value: lightgrey;
+    inherits: false;
+}
+
+@property --background-colour-dark {
+    syntax: "<color>";
+    initial-value: darkgrey;
+    inherits: false;
+}
+
+@property --text-colour-light {
+    syntax: "<color>";
+    initial-value: black;
+    inherits: false;
+}
+
+@property --text-colour-dark {
+    syntax: "<color>";
+    initial-value: white;
+    inherits: false;
+}
+
+body {
+    background-color: light-dark(var(--background-colour-light), var(--background-colour-dark));
+    color: light-dark(var(--text-colour-light), var(--text-colour-dark));
+}
