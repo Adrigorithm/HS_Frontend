@@ -4,5 +4,7 @@
 
     <link rel="stylesheet" href="/assets/css/style_v0.css">
 
+    <script src="/assets/js/init.js"></script>
+
     <title><?= esc($title) ?></title>
 </head>

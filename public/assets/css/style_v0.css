@@ -1,28 +1,41 @@
-@property --background-colour-light {
+@property --colour-white {
     syntax: "<color>";
-    initial-value: lightgrey;
+    initial-value: oklch(0.8 0 0);
     inherits: false;
 }
 
-@property --background-colour-dark {
+@property --colour-black {
     syntax: "<color>";
-    initial-value: darkgrey;
+    initial-value: oklch(0.2 0 0);
     inherits: false;
 }
 
-@property --text-colour-light {
+@property --colour-blue {
     syntax: "<color>";
-    initial-value: black;
+    initial-value: oklch(82.65% 0.066 250.73);
     inherits: false;
 }
 
-@property --text-colour-dark {
+@property --colour-red {
     syntax: "<color>";
-    initial-value: white;
+    initial-value: oklch(40.42% 0.107 21.64);
     inherits: false;
 }
 
-body {
-    background-color: light-dark(var(--background-colour-light), var(--background-colour-dark));
-    color: light-dark(var(--text-colour-light), var(--text-colour-dark));
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+/* LIGHT */
+.light {
+    background-color: var(--colour-white);
+    color: var(--colour-black);
+}
+
+/* DARK */
+
+.dark {
+    background-color: var(--colour-black);
+    color: var(--colour-white);
 }
