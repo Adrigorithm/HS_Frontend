@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 @property --colour-white {
     syntax: "<color>";
     initial-value: oklch(0.8 0 0);
@@ -27,15 +29,15 @@
     padding: 0;
 }
 
-/* LIGHT */
-.light {
-    background-color: var(--colour-white);
-    color: var(--colour-black);
+body {
+    background-color: light-dark(var(--colour-white), var(--colour-black));
+    color: light-dark(var(--colour-black), var(--colour-white));
 }
 
-/* DARK */
-
 .dark {
-    background-color: var(--colour-black);
-    color: var(--colour-white);
+    color-scheme: only dark;
+}
+
+.light {
+    color-scheme: only light;
 }
