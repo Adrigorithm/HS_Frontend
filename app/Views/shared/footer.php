@@ -11,8 +11,8 @@
     <section class="grid grid-cols-2 grid-rows-3 gap-3 text-center">
         <h3 class="text-xl font-bold col-span-2">Contact</h3>
         <p class="sm:text-right">Email:</p>
-        <a href="mailto:hsfrontend@hetzner.be">hsfrontend@hetzner.be</a>
+        <a class="sm:text-left" href="mailto:hsfrontend@hetzner.be">hsfrontend@hetzner.be</a>
         <p class="sm:text-right">Phone:</p>
-        <a href="tel:+32123456789">0123456789</a>
+        <a class="sm:text-left" href="tel:+32123456789">0123456789</a>
     </section>
 </footer>
