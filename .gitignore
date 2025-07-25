@@ -125,6 +125,7 @@ _modules/*
 /results/
 /phpunit*.xml
 
-# node
+# generated files
 /node_modules
 /package-lock.json
+/public/assets/css/output.css
