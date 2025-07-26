@@ -222,6 +222,12 @@
   .table {
     display: table;
   }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-\[2rem\] {
+    height: 2rem;
+  }
   .h-full {
     height: 100%;
   }
@@ -290,6 +296,21 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-r-3 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 3px;
+  }
+  .border-b-3 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 3px;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
+  }
+  .border-red {
+    border-color: var(--color-red);
   }
   .bg-blue {
     background-color: var(--color-blue);
@@ -363,6 +384,13 @@
       }
     }
   }
+  .hover\:fill-white {
+    &:hover {
+      @media (hover: hover) {
+        fill: var(--color-white);
+      }
+    }
+  }
   .hover\:text-red {
     &:hover {
       @media (hover: hover) {
@@ -385,6 +413,18 @@
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
+    }
+  }
+  .sm\:border-r-0 {
+    @media (width >= 40rem) {
+      border-right-style: var(--tw-border-style);
+      border-right-width: 0px;
+    }
+  }
+  .sm\:border-r-3 {
+    @media (width >= 40rem) {
+      border-right-style: var(--tw-border-style);
+      border-right-width: 3px;
     }
   }
   .sm\:text-left {
@@ -422,6 +462,15 @@
       @media (hover: hover) {
         @media (prefers-color-scheme: dark) {
           background-color: var(--color-blue);
+        }
+      }
+    }
+  }
+  .dark\:hover\:fill-black {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          fill: var(--color-black);
         }
       }
     }
