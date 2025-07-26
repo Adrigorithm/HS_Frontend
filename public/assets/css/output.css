@@ -427,6 +427,12 @@
       border-right-width: 3px;
     }
   }
+  .sm\:border-b-3 {
+    @media (width >= 40rem) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 3px;
+    }
+  }
   .sm\:text-left {
     @media (width >= 40rem) {
       text-align: left;

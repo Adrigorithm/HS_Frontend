@@ -4,7 +4,7 @@
     <main class="flex flex-row sm:flex-col">
         <?= view('shared/navigation') ?>
 
-        <section>Main content</section>
+        <section class="p-1">Main content</section>
     </main>
 
     <?= view('shared/footer') ?>
