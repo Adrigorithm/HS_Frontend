@@ -4,9 +4,16 @@
     <main class="flex flex-row sm:flex-col">
         <?= view('shared/navigation') ?>
 
-        <section class="p-1">Main content</section>
+        <section class="flex flex-col">
+            <h1>Welcome</h1>
+            <p></p>
+            <div class="flex flex-col sm:flex-row">
+
+            </div>
+        </section>
     </main>
 
     <?= view('shared/footer') ?>
+
     <script src="/assets/js/main.js"></script>
 </body>
