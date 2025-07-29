@@ -6,10 +6,6 @@
 
         <section class="flex flex-col">
             <h1>Welcome</h1>
-            <p></p>
-            <div class="flex flex-col sm:flex-row">
-
-            </div>
         </section>
     </main>
 
