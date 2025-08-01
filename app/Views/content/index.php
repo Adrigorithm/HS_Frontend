@@ -1,7 +1,7 @@
 <body class="bg-white dark:bg-black text-black dark:text-white flex flex-col">
     <?= view('shared/header') ?>
 
-    <main class="flex flex-row sm:flex-col">
+    <main class="flex flex-row">
         <?= view('shared/navigation') ?>
 
         <section class="flex flex-col">
