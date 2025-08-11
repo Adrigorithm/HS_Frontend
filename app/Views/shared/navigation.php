@@ -1,5 +1,5 @@
 <nav>
-    <ul class="flex flex-col bg-blue dark:bg-red text-center">
+    <ul class="flex flex-col bg-blue dark:bg-red text-center h-full">
         <li>
             <a href="/" class="<?php if($title == 'Home') {echo 'border-r-3 border-solid border-red';} ?> p-1 hover:bg-red hover:text-white hover:dark:bg-blue hover:dark:text-black flex fill-black dark:fill-white hover:fill-white dark:hover:fill-black">
                 <svg
