@@ -226,6 +226,9 @@
   .min-h-dvh {
     min-height: 100dvh;
   }
+  .min-w-full {
+    min-width: 100%;
+  }
   .grow {
     flex-grow: 1;
   }

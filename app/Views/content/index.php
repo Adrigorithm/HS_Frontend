@@ -5,7 +5,9 @@
         <?= view('shared/navigation') ?>
 
         <section class="flex flex-col">
-            <h1>Welcome</h1>
+            <video class="min-w-full" autoplay controls loop>
+                <source src="/assets/videos/intro.webm" type="video/webm" />
+            </video>
         </section>
     </main>
 
