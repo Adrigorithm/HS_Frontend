@@ -8,7 +8,7 @@
 
         <section class="flex flex-col">
             <div class="flex flex-col justify-end items-center video-custom-controls">
-                <video class="min-w-full" autoplay loop>
+                <video class="min-w-full" autoplay loop muted>
                     <source src="/assets/videos/intro.webm" type="video/webm" />
                 </video>
                 <ul class="fixed flex bg-blue dark:bg-red opacity-75">

@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use App\Entities\Book;
 use CodeIgniter\Model;
 
-class Book extends Model {
+class BookModel extends Model {
     protected $table = 'books';
     protected $primaryKey = 'id';
+    protected $returnType = Book::class;
 
     protected $allowedFields = [
         'title',
