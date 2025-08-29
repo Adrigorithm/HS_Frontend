@@ -5,9 +5,11 @@ namespace App\Models;
 use App\Entities\Book;
 use CodeIgniter\Model;
 
-class BookModel extends Model {
-    protected $table = 'books';
+class BookModel extends Model
+{
+    protected $table = 'Book';
     protected $primaryKey = 'id';
+    protected $useTimestamps = true;
     protected $returnType = Book::class;
 
     protected $allowedFields = [
