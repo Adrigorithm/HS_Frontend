@@ -4,6 +4,7 @@ namespace App\Entities;
 
 use CodeIgniter\Entity\Entity;
 
-class User extends Entity{
+class User extends Entity
+{
 
 }

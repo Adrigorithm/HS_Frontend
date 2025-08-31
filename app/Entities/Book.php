@@ -4,6 +4,7 @@ namespace App\Entities;
 
 use CodeIgniter\Entity\Entity;
 
-class Book extends Entity{
+class Book extends Entity
+{
 
 }
