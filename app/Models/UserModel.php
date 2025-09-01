@@ -1,60 +1,21 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use App\Entities\User;
-use CodeIgniter\Config\Services;
-use CodeIgniter\Encryption\EncrypterInterface;
-use CodeIgniter\Model;
+use CodeIgniter\Shield\Models\UserModel as ShieldUserModel;
 
-class UserModel extends Model
+class UserModel extends ShieldUserModel
 {
-    protected $table = 'User';
-    protected $primaryKey = 'id';
-    protected $useTimestamps = true;
-    protected $allowCallbacks = true;
-    protected $returnType = User::class;
-    protected $beforeInsert = ['encryptAndHash'];
-    protected $afterFind = ['decrypt'];
-    protected EncrypterInterface $encrypter;
-
-    public function __construct(EncrypterInterface $encrypter)
+    protected function initialize(): void
     {
-        parent::__construct();
+        parent::initialize();
 
-        $this->encrypter = $encrypter;
-    }
+        $this->allowedFields = [
+            ...$this->allowedFields,
 
-    protected $allowedFields = [
-        'username',
-        'email',
-        'password',
-        'is_admin'
-    ];
-
-    private function encryptAndHash(array $data): array
-    {
-        if (isset($data['data']['password']))
-            $data['data']['password'] = $this->hash($data['data']['password']);
-
-        if (isset($data['data']['username']))
-            $data['data']['username'] = $this->encrypt($data['data']['username']);
-
-        if (isset($data['data']['email']))
-            $data['data']['email'] = $this->encrypt($data['data']['email']);
-
-        return $data;
-    }
-
-    private function hash(string $data): string {
-        return password_hash($data, PASSWORD_DEFAULT);
-    }
-
-    private function encrypt(string $data): string {
-        return $this->encrypter->encrypt($data);
-    }
-
-    private function decrypt(string $data): string {
-        return $this->encrypter->decrypt($data);
+            // 'first_name',
+        ];
     }
 }
