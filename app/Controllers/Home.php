@@ -46,4 +46,13 @@ class Home extends BaseController
 
         return view('pages/store', $data);
     }
+
+    public function admin(): string
+    {
+        $data = [
+            'title' => 'Admin'
+        ];
+
+        return view('pages/admin', $data);
+    }
 }

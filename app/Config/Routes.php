@@ -11,3 +11,4 @@ $routes->get('/about', [Home::class, 'about']);
 $routes->get('/contact', [Home::class, 'contact']);
 $routes->get('/projects', [Home::class, 'projects']);
 $routes->get('/store', [Home::class, 'store']);
+$routes->get('/admin', [Home::class, 'admin']);
