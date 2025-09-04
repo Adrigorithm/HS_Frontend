@@ -7,7 +7,8 @@ class Home extends BaseController
     public function index(): string
     {
         $data = [
-            'title' => 'Home'
+            'title' => 'Home',
+            'loggedIn' => auth()->loggedIn()
         ];
 
         return view('pages/index', $data);
@@ -15,7 +16,8 @@ class Home extends BaseController
 
     public function about(): string{
         $data = [
-            'title' => 'About'
+            'title' => 'About',
+            'loggedIn' => auth()->loggedIn()
         ];
 
         return view('pages/about', $data);
@@ -24,7 +26,8 @@ class Home extends BaseController
     public function contact(): string
     {
         $data = [
-            'title' => 'Contact'
+            'title' => 'Contact',
+            'loggedIn' => auth()->loggedIn()
         ];
 
         return view('pages/contact', $data);
@@ -32,7 +35,8 @@ class Home extends BaseController
 
     public function projects(): string{
         $data = [
-            'title' => 'Projects'
+            'title' => 'Projects',
+            'loggedIn' => auth()->loggedIn()
         ];
 
         return view('pages/projects', $data);
@@ -41,7 +45,8 @@ class Home extends BaseController
     public function store(): string
     {
         $data = [
-            'title' => 'Store'
+            'title' => 'Store',
+            'loggedIn' => auth()->loggedIn()
         ];
 
         return view('pages/store', $data);
@@ -50,9 +55,25 @@ class Home extends BaseController
     public function admin(): string
     {
         $data = [
-            'title' => 'Admin'
+            'title' => 'Admin',
+            'loggedIn' => auth()->loggedIn()
         ];
 
         return view('pages/admin', $data);
+    }
+
+    public function login(): string
+    {
+
+    }
+
+    public function logout(): string
+    {
+
+    }
+
+    public function account(): string
+    {
+
     }
 }
