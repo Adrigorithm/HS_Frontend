@@ -12,7 +12,7 @@ Setup
 
 Periodically, you may want to run some commands. To watch and rebuild CSS files:
 - `npx @tailwindcss/cli -i ./public/assets/css/input.css -o ./public/assets/css/output.css --watch`
-- `php spark serve`
+- `php spark serve --port 10000`
 
 ## Technologies
 This website is built using
