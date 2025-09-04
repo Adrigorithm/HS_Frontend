@@ -64,16 +64,31 @@ class Home extends BaseController
 
     public function login(): string
     {
+        $data = [
+            'title' => 'Login',
+            'loggedIn' => auth()->loggedIn()
+        ];
 
+        return view('pages/login', $data);
     }
 
     public function logout(): string
     {
+        $data = [
+            'title' => 'Home',
+            'loggedIn' => auth()->loggedIn()
+        ];
 
+        return view('pages/index', $data);
     }
 
     public function account(): string
     {
+        $data = [
+            'title' => 'Account',
+            'loggedIn' => auth()->loggedIn()
+        ];
 
+        return view('pages/account', $data);
     }
 }
